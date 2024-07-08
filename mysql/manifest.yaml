@@ -64,7 +64,7 @@ spec:
         volumeMounts:
         - name: mysql
           mountPath: /var/lib/mysql
-  # PVC declaration, it is mandatory
+  # PVC declaration, it is mandatory, it also creates PV
   volumeClaimTemplates:
   - metadata:
       name: mysql
