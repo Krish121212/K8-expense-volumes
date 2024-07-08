@@ -1,1 +1,16 @@
 # going with EBS, dynamic provisioning 
+
+# pvc
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql
+  namespace: expense  
+spec:
+  storageClassName: "ebs-expense"
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 3Gi 
